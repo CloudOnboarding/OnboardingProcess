@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utility.Listener"></listener>
+	</listeners>
+
+	<test name="Active Organization">
+		<classes>
+			<class name="appModules.TestScenarios.ImplSetup.TS_ActivateOrganization" />
+		</classes>
+	</test>
+
+	<test name="Add System Setup User">
+		<classes>
+			<class name="appModules.TestScenarios.ImplSetup.TS_AddSystemSetupUsers" />
+		</classes>
+	</test>
+
+
+	<test name="Add Upload Organization Logo">
+		<classes>
+			<class
+				name="appModules.TestScenarios.ImplSetup.TS_AddUploadOrganizationLogo" />
+		</classes>
+	</test>
+
+
+	<test name="Organization Theme Change">
+		<classes>
+			<class
+				name="appModules.TestScenarios.ImplSetup.TS_OrganizationThemeChange" />
+		</classes>
+	</test>
+
+
+	<test name="Setup Organization Contacts Default Theme">
+		<classes>
+			<class
+				name="appModules.TestScenarios.ImplSetup.TS_SetupOrgContatcts_DefaultTheme_Logo" />
+		</classes>
+	</test>
+
+	<test name="New Attribute Value">
+		<classes>
+			<class name="appModules.TestScenarios.ImplSetup.TS_NewAttributeValue" />
+		</classes>
+	</test>
+
+
+	<test name="Change Authentication Notification Emails">
+		<classes>
+			<class
+				name="appModules.TestScenarios.ContentChanges.TS_ChangeAuthenticationNotificationEmails" />
+		</classes>
+	</test>
+
+	<test name="Change Onboarding Process Notification Emails">
+		<classes>
+			<class
+				name="appModules.TestScenarios.ContentChanges.TS_ChangeOnboardProcessNotificationEmails" />
+		</classes>
+	</test>
+
+
+	<test name="Invite New Hire">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_InviteNewHire" />
+		</classes>
+	</test>
+
+	<test name="Resend Invitation For New Hire">
+		<classes>
+			<class
+				name="appModules.TestScenarios.AdminActns.TS_ResendInvitationNewHire" />
+		</classes>
+	</test>
+
+	<test name="Restart Onboarding Processe">
+		<classes>
+			<class
+				name="appModules.TestScenarios.AdminActns.TS_RestartOnboardingProcess" />
+		</classes>
+	</test>
+
+	<test name="Lock New Hire Account">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_LockNewHireAccounts" />
+		</classes>
+	</test>
+
+	<test name="Unlock new hire account">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_UnLockNewHireAccounts" />
+		</classes>
+	</test>
+
+	<test name="Reset Epin">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_ResetEpin" />
+		</classes>
+	</test>
+
+	<test name="Reset Password">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_ResetPassword" />
+		</classes>
+	</test>
+
+	<test name="Fource Complete Process">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_ForceCompleteProcess" />
+		</classes>
+	</test>
+
+	<test name="Purge Process">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_PurgeProcess" />
+		</classes>
+	</test>
+
+
+	<test name="Terminate Process">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_TerminateProcess" />
+		</classes>
+	</test>
+
+
+	<test name="Lock User Account">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_LockUserAccounts" />
+		</classes>
+	</test>
+
+	<test name="Unlock User Account">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_UnlockUserAccounts" />
+		</classes>
+	</test>
+
+	<test name="Change Epin">
+		<classes>
+			<class name="appModules.TestScenarios.LoginSelfServicesActns.TS_ChangeEpin" />
+		</classes>
+	</test>
+
+	<test name="Change Profile">
+		<classes>
+			<class name="appModules.TestScenarios.LoginSelfServicesActns.TS_ChangeProfile" />
+		</classes>
+	</test>
+	<test name="Invite New Hire1">
+		<classes>
+			<class name="appModules.TestScenarios.LoginSelfServicesActns.TS_ManageChallengeQuest" />
+		</classes>
+	</test>
+
+	<test name="Change Attribute Preference">
+		<classes>
+			<class name="appModules.TestScenarios.ImplSetup.TS_AttributePrefrence" />
+		</classes>
+	</test>
+
+	<test name="Change Attribute Scheme Preference">
+		<classes>
+			<class
+				name="appModules.TestScenarios.ImplSetup.TS_AuthenticationSchemePreference" />
+		</classes>
+	</test>
+
+	<test name="Change USer Role">
+		<classes>
+			<class name="appModules.TestScenarios.AdminActns.TS_ChangeUserRoles" />
+		</classes>
+	</test>
+
+	<test name="Change Password">
+		<classes>
+			<class
+				name="appModules.TestScenarios.LoginSelfServicesActns.TS_ChangePassword" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->

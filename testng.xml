@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmartERP Onboarding Complete Flow">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+ 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utility.Listener"></listener>
+		<listener class-name="utility.CustomeReport"></listener>
+	</listeners>
+
+	<parameter name="sTestCaseName" value="Cloud Onboarding Flow" />
+
+	<test name="startTestCase" parallel="false" preserve-order="true"
+		verbose="2">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="startTestCase" />
+				</methods>
+			</class>
+		</classes>
+	</test><!-- Test -->
+
+	<test name="Orginization Creation">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+ 			<class name="appModules.Internal_Login" />
+			<class name="appModules.NavigateToOrganizationRegistration_Page" />
+			<class name="appModules.CreateOrganization" /> 
+		</classes>
+	</test>   <!-- Test -->
+
+		<test name="endTestCase">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="endTestCase" />
+				</methods>
+			</class>
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

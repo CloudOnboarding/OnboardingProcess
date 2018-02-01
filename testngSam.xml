@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmartERP Onboarding Complete Flow">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+ 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utility.Listener"></listener>
+		<listener class-name="utility.CustomeReport"></listener>
+	</listeners>
+
+	<parameter name="sTestCaseName" value="Cloud Onboarding Flow" />
+
+	<test name="startTestCase" parallel="false" preserve-order="true"
+		verbose="2">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="startTestCase" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Orginization Creation">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+			<class name="appModules.Internal_Login" />
+			<class name="appModules.NavigateToOrganizationRegistration_Page" />
+			<class name="appModules.CreateOrganization" /> 
+		</classes>
+	</test>  
+
+	<test name="TA User and Orginization Onboarding">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+			<class name="appModules.SelfRegistration" />
+			<class name="appModules.External_Login" />
+			<class name="appModules.Verification2Factor_Authentication" />
+			<class name="appModules.Setup_ChallengeQuestions" />
+			<class name="appModules.SmartOnboardingWelcome" />
+			<class name="appModules.OnboardingMaster.TA_OnboardingProcess" />
+
+		</classes>
+	</test>   
+
+	 <test name="Create And Manage Users">
+		<classes>
+
+			<class name="appModules.OnboardingMaster.TA_CreateNewTenantUser" />
+
+		</classes>
+	</test>   
+
+	 <test name="Tenant User Onboarding">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+			<class name="appModules.SelfRegistration" />
+			<class name="appModules.External_Login" />
+			<class name="appModules.Verification2Factor_Authentication" />
+			<class name="appModules.Setup_ChallengeQuestions" />
+			<class name="appModules.SmartOnboardingWelcome" />
+			<class name="appModules.OnboardingMaster.TU_UserOnboarding" />
+		</classes>
+	</test>   
+
+     	 <test name="TU CreateInvitation Process">
+		<classes>
+			<class name="appModules.OnboardingMaster.TU_CreateInvitation" />
+		</classes>
+	</test> 
+	
+		 <test name="CA Onboarding Procrss">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+			<class name="appModules.SelfRegistration" />
+			<class name="appModules.External_Login" />
+			<class name="appModules.Verification2Factor_Authentication" />
+			<class name="appModules.Setup_ChallengeQuestions" />
+			<class name="appModules.SmartOnboardingWelcome" />
+			 <class name="appModules.OnboardingMaster.CA_OnboardingProcess"/>
+		</classes>
+	</test>
+
+	 <test name="CA HR-I9Admin-EVerify Process">
+		<classes>
+		
+			<class name="appModules.OnboardingMaster.CA_HRAdminTasks" />
+			<class name="appModules.OnboardingMaster.CA_I9AdminTasks" />
+			<class name="appModules.OnboardingMaster.CA_EVerifyAdminTasks" />
+			
+		</classes>
+	</test> 
+
+	<test name="endTestCase">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="endTestCase" />
+				</methods>
+			</class>
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

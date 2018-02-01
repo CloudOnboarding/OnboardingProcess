@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Onboarding Suite Scenarios">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utility.Listener"></listener>
+		<listener class-name="utility.CustomeReport"></listener>
+		<listener class-name="utility.xmlSuiteEventListener"></listener>
+	</listeners>
+
+	<parameter name="sTestCaseName" value="Cloud Onboarding Flow" />
+	<parameter name="StopFlag" value="false" />
+
+	<test name="StopOnFailSetup">
+		<classes>
+			<class name="utility.utils">
+				<methods>
+					<include name="StopOnFail" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="startTestCase">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="startTestCase" />
+				</methods>
+			</class>
+
+		</classes>
+	</test>
+	
+
+	<test name="Orginization Creation">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+			<class name="appModules.Login.Internal_Login" />
+			<class name="appModules.NavigateToOrganizationRegistration_Page" />
+			<class name="appModules.CreateOrganization" />
+		</classes>
+	</test>
+
+	<test name="Activate Orginization">
+		<classes>
+			<class name="appModules.Login.TAFirstLogin" />
+			<class name="appModules.OnboardingMaster.TA_OnboardingProcess" />
+		</classes>
+	</test>
+
+ <test name="Creating Revision Content">
+		<classes>
+		    <class name="appModules.Revision.Content.ImageManagement" />
+	    	<class name="appModules.Revision.Content.NotificationTemplates" />
+	    	<class name="appModules.Revision.Content.ChangeAuthNotifyEmail" />
+	    	<class name="appModules.Revision.Content.Attachments"/>
+	    	<class name="appModules.Revision.Content.TextCatalog"/>
+	    	<class name="appModules.Revision.Content.PDFTemplate"/>
+	    	<class name="appModules.Revision.Content.AddSmartChecklists"/>
+	    	<class name="appModules.Revision.Content.AddSmartForm"/>
+			<class name="appModules.Revision.Content.VerifivcationVendor" />
+			<class name="appModules.Revision.Content.BackgroundCheckVendors" />
+			<class name="appModules.Revision.Content.ChangeContentOnUserPageMixedContent" />
+			<class name="appModules.Revision.RV_ApplyRevision" />
+		</classes>
+	</test>
+	 <test name="Creating Revision Process">
+		<classes>
+		
+        <class name="appModules.Revision.Configuration.ApplyAuthNotifyEmail" />  
+		<class name="appModules.Revision.Configuration.ApplyChngonbProcNotifyEmails"/>
+	    <class name="appModules.Revision.Configuration.ApplyContentOnUserPage"/>
+	    <class name="appModules.Revision.Configuration.NewAttributes" />
+	    <class name="appModules.Revision.Configuration.AddAction" />
+		<class name="appModules.Revision.Configuration.ContentSecurity" /> 
+	<!-- 	<class name="appModules.Revision.Configuration.MassUploadRevisionAttribute"/> -->
+		<class name="appModules.Revision.RV_ApplyRevision" /> 
+		<class name="appModules.ImplSetup.OrganizationThemeChange" />
+		<class name="appModules.ImplSetup.SetupOrgContatcts_DefaultTheme_Logo" />
+		</classes>
+	</test> 
+
+	 <test name="Add System Setup User">
+		<classes>
+			<class name="appModules.OnboardingMaster.TA_CreateNewTenantUser" />
+			<class name="appModules.Login.TUFirstLogin" />
+			<class name="appModules.OnboardingMaster.TU_UserOnboarding" />
+		</classes>
+	</test>
+	
+
+	 <test name="Create And Manage NewHires-I">
+		<classes>
+			 <class name="appModules.OnboardingMaster.TU_CreateInvitation" />
+			<class name="appModules.Login.CAFirstLogin" /> 
+			<class name="appModules.ManageNewHires.ResendInvitationNewHire" />
+			 <class name="appModules.ManageNewHires.RestartOnboardingProcess" />
+			<class name="appModules.ManageNewHires.ForceCompleteProcess" /> 
+			<class name="appModules.ManageNewHires.PurgeProcess" /> 
+		</classes>
+	</test> 
+	
+
+
+	<test name="Create And Manage NewHires-II">
+		<classes>
+			 <class name="appModules.OnboardingMaster.TU_CreateInvitation" />
+			<class name="appModules.Login.CAFirstLogin" /> 
+		<class name="appModules.ManageNewHires.LockNewHireAccounts" />
+			<class name="appModules.ManageNewHires.UnLockNewHireAccounts" />
+			<class name="appModules.ManageNewHires.ResetEpin" />
+			<class name="appModules.ManageNewHires.ResetPassword" />
+			<class name="appModules.ManageNewHires.TerminateProcess" />
+		</classes>
+	</test>
+		
+
+ 	<test name="Manage User Accounts and Self Service Actions">
+		<classes>
+			<class name="appModules.ManageUserAccounts.LockUserAccounts" />
+			<class name="appModules.ManageUserAccounts.UnlockUserAccounts" />
+			<class name="appModules.ManageUserAccounts.ChangeUserRoles" />
+			<class name="appModules.SelfServiceActions.ChangeEpin" />
+			<class name="appModules.SelfServiceActions.ChangeProfile" />
+			<class name="appModules.SelfServiceActions.AddAvatar"/>
+			<class name="appModules.SelfServiceActions.ManageChallengeQuest" />
+			<!-- <class name="appModules.SelfServiceActions.ChangePassword" /> -->
+			<class name="appModules.ImplSetup.AttributePrefrence" />
+			<class name="appModules.ImplSetup.AuthenticationSchemePreference" />
+		</classes>
+	</test> 
+ 
+	<test name="endTestCase">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="endTestCase" />
+				</methods>
+			</class>
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmartERP Onboarding Complete Flow">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utility.Listener"></listener>
+		<listener class-name="utility.CustomeReport"></listener>
+		<listener class-name="utility.xmlSuiteEventListener"></listener>
+	</listeners>
+
+	<parameter name="sTestCaseName" value="Cloud Onboarding Flow" />
+	<parameter name="iTestCaseRow" value="4" />
+	<parameter name="StopFlag" value="true" />
+
+	<test name="StopOnFailSetup"  >
+		<classes>
+			<class name="utility.utils">
+				<methods>
+					<include name="StopOnFail" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="iTestCaseRow"  >
+		<classes>
+			<class name="utility.utils">
+				<methods>
+					<include name="iTestCaseRow" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="startTestCase"  >
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="startTestCase" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+
+   	 <test name="Orginization Creation">
+		<classes>
+			<class name="appModules.SetEnvironment" />
+			<class name="appModules.Login.Internal_Login" />
+			<class name="appModules.NavigateToOrganizationRegistration_Page" />
+			<class name="appModules.CreateOrganization" />
+		</classes>
+	</test>
+
+	<test name="TA User and Orginization Onboarding">
+		<classes>
+			<class name="appModules.Login.TAFirstLogin" />
+			<class name="appModules.OnboardingMaster.TA_OnboardingProcess" />
+		</classes>
+	</test> 
+	
+	<test name="Creating Revision">
+		<classes>
+			<class name="appModules.OnboardingMaster.RevisionMaster" />
+		</classes>
+	</test>
+  
+	  <test name="Create Users">
+		<classes>
+			<class name="appModules.OnboardingMaster.TA_CreateNewTenantUser" />
+		</classes>
+	</test>
+	
+	<test name="Tenant User Onboarding">
+		<classes>
+			<class name="appModules.Login.TUFirstLogin" />
+			<class name="appModules.OnboardingMaster.TU_UserOnboarding" />
+		</classes>
+	</test>  
+
+	<test name="Create Invitation">
+		<classes>
+			 <class name="appModules.OnboardingMaster.TU_CreateInvitation" /> 
+			<class name="appModules.Login.CAFirstLogin" />
+		</classes>
+	</test>
+
+
+	 <test name="CA Onboarding Procrss">
+		<classes>
+			<class name="appModules.OnboardingMaster.CA_OnboardingProcess" />
+		</classes>
+	</test>  
+ 
+	<test name="endTestCase">
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="endTestCase" />
+				</methods>
+			</class>
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

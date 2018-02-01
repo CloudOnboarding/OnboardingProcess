@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmartERP Onboarding Complete Flow">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utility.Listener"></listener>
+		<listener class-name="utility.CustomeReport"></listener>
+		<listener class-name="utility.xmlSuiteEventListener"></listener>
+	</listeners>
+
+	<parameter name="sTestCaseName" value="Cloud Onboarding Flow" />
+	<parameter name="iTestCaseRow" value="14" />
+	<parameter name="StopFlag" value="false" />
+
+	<test name="StopOnFailSetup"  >
+		<classes>
+			<class name="utility.utils">
+				<methods>
+					<include name="StopOnFail" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="iTestCaseRow"  >
+		<classes>
+			<class name="utility.utils">
+				<methods>
+					<include name="iTestCaseRow" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="startTestCase"  >
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="startTestCase" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+ 	 <test name="Create Invitation"  >
+		<classes>
+			<class name="appModules.OnboardingMaster.TU_CreateInvitation" />
+			 <class name="appModules.Login.CAFirstLogin" /> 
+		</classes>
+	</test> 
+
+	 <test name="CA Onboarding Process"  >
+		<classes>
+			<class name="appModules.OnboardingMaster.CA_OnboardingProcess" />
+		</classes>
+	</test> 
+
+	<test name="endTestCase"  >
+		<classes>
+			<class name="utility.Log">
+				<methods>
+					<include name="endTestCase" />
+				</methods>
+			</class>
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,66 @@
+public static WebElement txt_OrgName() throws Exception{
+  element = null;
+  try{
+     element=psUtility.swithFrame("driver.findElement(By.id(\"SM_CO_ORGINVITE_SM_CO_ORG_NAME\"))");
+     Log.info("txt_OrgName found in the OrgCreation_page");
+  }catch (Exception e){
+  Log.info("txt_OrgName not found in the OrgCreation_page");
+  throw(e);
+  }
+ return element;
+}
+public static WebElement txt_OrgDescr() throws Exception{
+  element = null;
+  try{
+     element=psUtility.swithFrame("driver.findElement(By.id(\"SM_CO_ORGINVITE_DESCR\"))");
+     Log.info("txt_OrgDescr found in the OrgCreation_page");
+  }catch (Exception e){
+  Log.info("txt_OrgDescr not found in the OrgCreation_page");
+  throw(e);
+  }
+ return element;
+}
+public static WebElement txt_ShortDescr() throws Exception{
+  element = null;
+  try{
+     element=psUtility.swithFrame("driver.findElement(By.id(\"SM_CO_ORGINVITE_DESCRSHORT\"))");
+     Log.info("txt_ShortDescr found in the OrgCreation_page");
+  }catch (Exception e){
+  Log.info("txt_ShortDescr not found in the OrgCreation_page");
+  throw(e);
+  }
+ return element;
+}
+public static WebElement txt_HostName() throws Exception{
+  element = null;
+  try{
+     element=psUtility.swithFrame("driver.findElement(By.id(\"SM_CO_ORGINVITE_HOSTNAME\"))");
+     Log.info("txt_HostName found in the OrgCreation_page");
+  }catch (Exception e){
+  Log.info("txt_HostName not found in the OrgCreation_page");
+  throw(e);
+  }
+ return element;
+}
+public static WebElement txt_County() throws Exception{
+  element = null;
+  try{
+     element=psUtility.swithFrame("driver.findElement(By.id(\"SM_CO_NAME_WORK_COUNTRY_NM_FORMAT\"))");
+     Log.info("txt_County found in the OrgCreation_page");
+  }catch (Exception e){
+  Log.info("txt_County not found in the OrgCreation_page");
+  throw(e);
+  }
+ return element;
+}
+public static WebElement txt_NamePrefix() throws Exception{
+  element = null;
+  try{
+     element=psUtility.swithFrame("driver.findElement(By.id(\"SM_CO_NAME_WORK_NAME_PREFIX\"))");
+     Log.info("txt_NamePrefix found in the OrgCreation_page");
+  }catch (Exception e){
+  Log.info("txt_NamePrefix not found in the OrgCreation_page");
+  throw(e);
+  }
+ return element;
+}

@@ -1,0 +1,15 @@
+"Description
+",Long Description,Desired Lookup ID,Desired Lookup Description,Customer ERP Reference,Customer Reference,Customer Reference Description,Native Parent Attribute LookUp ID,Country,Address1,Address 2,Address 3,City,State,Postal,County
+British Columbia,British Columbia,NEXT,British Columbia,PSFT,,,LO00000028,CAN,4033 Robson St,,,Vancouver,BC,V6B 3K9,
+Alberta,Alberta,NEXT,Alberta,PSFT,,,LO00000028,CAN,60 Patterson Blvd SW Calgary,,,Calgary,AB,T3H 2E1,
+Manitoba,Manitoba,NEXT,Manitoba,PSFT,,,LO00000028,CAN,22 Ashgrove Pt,,,Winnipeg,MB,R3Y 0A2,
+New Brunswick,New Brunswick,NEXT,New Brunswick,PSFT,,,LO00000028,CAN,2210 Mountain Rd,,,Moncton,NB,E1C 1H6,
+Newfoundland and Labrador,Newfoundland and Labrador,NEXT,Newfoundland and Labrador,PSFT,,,LO00000028,CAN,4577 Kenmount Road,,,St John,NL,A1B 3P2,
+Northwest Territories,Northwest Territories,NEXT,Northwest Territories,PSFT,,,LO00000028,CAN, 10-123 1/2 MAIN STREET NW  ,,,MONTREAL ,NT,H3Z 2Y7,
+Nova Scotia,Nova Scotia,NEXT,Nova Scotia,PSFT,,,LO00000028,CAN,220 Higginsville Road,,,Waverley,NS,B0N 2S0,
+Nunavut (NU),Nunavut (NU),NEXT,Nunavut (NU),PSFT,,,LO00000028,CAN,222 49th Avenue,,,Hall Beach,NU,X0A 0K0,
+Ontario,Ontario,NEXT,Ontario,PSFT,,,LO00000028,CAN,4141 St-Jacques Est,,,Victoriaville,ON,G6P 4E5,
+Prince Edward Island,Prince Edward Island,NEXT,Prince Edward Island,PSFT,,,LO00000028,CAN,4992 Cannon Line Dr,,,Waterside,PE,C1B 0S8,
+Quebec,Quebec,NEXT,Quebec,PSFT,,,LO00000028,CAN,3589 avenue de Port-Royal,,,Bonaventure,QC,G0C 1E0,
+Saskatchewan,Saskatchewan,NEXT,Saskatchewan,PSFT,,,LO00000028,CAN,163 St. John Street,,,Cupar,SK,S4P 3Y2,
+Yukon,Yukon,NEXT,Yukon,PSFT,,,LO00000028,CAN,4311 47th Avenue,,,Watson Lake,YT,Y0A 1C0,
